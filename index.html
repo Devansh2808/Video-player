@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Video Player</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<div class="player-container" id="video-container">
+  <video id="video" src="sample.mp4" preload="metadata"></video>
+
+  <div class="controls" id="controls">
+    <input type="range" id="progress" value="0" />
+
+    <div class="controls-row">
+      <div class="left-controls">
+        <button id="playPause">▶️</button>
+        <button id="backward">⏪ 10s</button>
+        <button id="forward">10s ⏩</button>
+        <button id="muteUnmute">🔊</button>
+        <input type="range" id="volume" min="0" max="1" step="0.01" />
+        <span id="time-display">00:00 / 00:00</span>
+      </div>
+
+      <div class="right-controls">
+        <select id="playbackRate">
+          <option value="0.5">0.5x</option>
+          <option value="1" selected>1x</option>
+          <option value="1.5">1.5x</option>
+          <option value="2">2x</option>
+        </select>
+        <button id="pipBtn">🖼 PiP</button>
+        <button id="fullscreen">⛶</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
